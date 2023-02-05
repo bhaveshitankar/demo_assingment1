@@ -29,7 +29,7 @@ def file_2_datastream(file_path):
         raise Exception("File format is incorrect!")
     if len(data) == 2:
         return data
-    data_stream = ' '.join(data[2:]).split(' ')
+    data_stream = [a for a in ' '.join(data[2:]) if a !=' ']
     if len(data_stream) != x*y:
          raise Exception("File format is incorrect!\n(Hint : dimension mismatch)")
     else:
@@ -105,6 +105,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-    
-
