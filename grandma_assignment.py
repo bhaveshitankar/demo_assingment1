@@ -78,7 +78,7 @@ def store_to_file(file_path,data_stream_2d):
     for row in data_stream_2d:
         to_write_str += " ".join(row)+"\n"
     with open(os.path.join(new_path_dir,new_name),"w") as FH:
-        FH.write(to_write_str.strip())
+        FH.write(to_write_str)
 
 def main():
 
